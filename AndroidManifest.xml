@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.petrsu.geo2tag"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name=".Main"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.petrsu.geo2tag.DisplayMessageActivity"
+                  android:label="@string/title_activity_display_message"
+                  android:parentActivityName="com.petrsu.geo2tag.Main" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.petrsu.geo2tag.Main"/>
+        </activity>
+        <activity android:name="com.petrsu.geo2tag.ChannelsActivity"
+                  android:label="@string/title_activity_channels"
+                  android:parentActivityName="com.petrsu.geo2tag.Main" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.petrsu.geo2tag.Main"/>
+        </activity>
+    </application>
+</manifest>
