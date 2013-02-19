@@ -46,7 +46,6 @@ public class LoginRequest extends BaseRequest {
     }
 
     public void doRequest() {
-        AsyncRunner asyncRunner = new AsyncRunner(m_listener, m_serverUrl);
-        asyncRunner.doInBackground(getJsonRequest());
+        new AsyncRunner(m_listener, m_serverUrl).execute(getJsonRequest());
     }
 }

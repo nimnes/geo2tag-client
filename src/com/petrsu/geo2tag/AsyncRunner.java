@@ -7,6 +7,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
@@ -30,7 +32,7 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
         return m_serverUrl;
     }
 
-    AsyncRunner(RequestListener listener, String serverUrl) {
+    public AsyncRunner(RequestListener listener, String serverUrl) {
         m_listener = listener;
         m_serverUrl = serverUrl;
     }
@@ -43,9 +45,12 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
         try {
             HttpClient httpClient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(m_serverUrl + requestJSON.getString("method"));
+            Log.i(ASYNC_LOG, m_serverUrl + requestJSON.getString("method"));
+
             httpPost.setHeader("content-type", "application/json");
 
             StringEntity entity = new StringEntity(requestJSON.toString());
+            entity.setContentEncoding(new BasicHeader(HTTP.CONTENT_ENCODING, "application/json"));
             httpPost.setEntity(entity);
 
             Log.i(ASYNC_LOG, requestJSON.toString());
@@ -61,6 +66,7 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
                 responseJSON.put("channel", requestJSON.getString("channel"));
             }
         } catch (Exception e) {
+            e.printStackTrace();
             Log.e(ASYNC_LOG, "Error while executing request");
         }
 

@@ -17,7 +17,7 @@ import com.petrsu.geo2tag.objects.*;
 
 public class Main extends Activity {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
-    public final static String SERVER_URL = "http://tracks.osll.spb.ru:81/service";
+    public final static String SERVER_URL = "http://debug.geo2tag.org/service/";
     public User m_user = null;
 
     /**
