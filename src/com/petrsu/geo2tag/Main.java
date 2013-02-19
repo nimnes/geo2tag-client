@@ -37,13 +37,8 @@ public class Main extends Activity {
                 android.R.id.text1, values);
         listView.setAdapter(adapter);
 
-//        RegisterUserRequest registerUserRequest = new RegisterUserRequest("nimnes", "geo2tag", "nimnes@gmail.com", SERVER_URL,
-//                new RegisterUserListener());
-//        registerUserRequest.doRequest();
-
-        m_user.setToken("1b39d6a84725954d3ab8ff43cbd47b96");
         if (m_user.getToken() == null) {
-            LoginRequest loginRequest = new LoginRequest("kulakov", "123", SERVER_URL, new LoginRequestListener());
+            LoginRequest loginRequest = new LoginRequest("nimnes", "geo2tag", SERVER_URL, new LoginRequestListener());
             loginRequest.doRequest();
         }
 

@@ -49,8 +49,7 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
 
             httpPost.setHeader("content-type", "application/json");
 
-            StringEntity entity = new StringEntity(requestJSON.toString());
-            entity.setContentEncoding(new BasicHeader(HTTP.CONTENT_ENCODING, "application/json"));
+            StringEntity entity = new StringEntity(requestJSON.getJSONObject("params").toString());
             httpPost.setEntity(entity);
 
             Log.i(ASYNC_LOG, requestJSON.toString());
@@ -74,11 +73,12 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
     }
 
     protected void onPostExecute(JSONObject result) {
-        Log.i(ASYNC_LOG, result.toString());
         if (result == null) {
             m_listener.onGeo2TagError(-1);
             return;
         }
+
+        Log.i(ASYNC_LOG, result.toString());
 
         try {
             int errorCode = result.getInt("errno");
