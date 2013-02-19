@@ -40,109 +40,109 @@ public interface IRequest {
         String METHOD = "method";
     }
 
-	public interface ILogin{
-		String REQUEST = "/login";
-		
-		String LOGIN = "login";
-		String PASSWORD = "password";
-	}
+    public interface ILogin{
+        String REQUEST = "/login";
 
-	public interface IAddUser{
-		String REQUEST = "/addUser";
-		
-		String LOGIN = "login";
-		String PASSWORD = "password";
-		String EMAIL = "email";
-	}
+        String LOGIN = "login";
+        String PASSWORD = "password";
+    }
 
-	public interface IApplyChannel{
-		String REQUEST = "/addChannel";
-		
-		String AUTH_TOKEN = "auth_token";
-		String NAME = "name";
-		String DESCRIPTION = "description";
-		String URL = "url";
-		String ACTIVE_RADIUS = "activeRadius";
-	}
+    public interface IAddUser{
+        String REQUEST = "/addUser";
 
-	public interface IApplyMark{
-		String REQUEST = "/writeTag";
+        String LOGIN = "login";
+        String PASSWORD = "password";
+        String EMAIL = "email";
+    }
 
-		String AUTH_TOKEN = "auth_token";
-		String CHANNEL = "channel";
-		String TITLE = "title";
-		String LINK = "link";
-		String DESCRIPTION = "description";
-		String LATITUDE = "latitude";
-		String LONGITUDE = "longitude";
-		String TIME = "time";
-	}
-	
-	public interface IResponse{
-		String STATUS = "status";
-		String STATUS_DESCRIPTION = "status_description";
-		String AUTH_TOKEN = "auth_token";
-		
-		String OK_STATUS = "Ok";
-		String ERROR_STATUS = "Error";
+    public interface IApplyChannel{
+        String REQUEST = "/addChannel";
 
-		String USER_EXTSTS = "Username already exists!";
-		String CHANNEL_EXTSTS = "Channel exists!";
-	}
-	
-	public interface IBaseFilter{
-		String AUTH_TOKEN 		= "auth_token";
-		String TIME_FROM 		= "time_from";
-		String TIME_TO 			= "time_to";
-		
-		String ALT_SHIFT 		= "altitude_shift";
-		String ALT1 			= "altitude1";
-		String ALT2 			= "altitude2";		
-	}
-	
-	public interface ISubscribeChannel {
-		String REQUEST = "/subscribe";
+        String AUTH_TOKEN = "auth_token";
+        String NAME = "name";
+        String DESCRIPTION = "description";
+        String URL = "url";
+        String ACTIVE_RADIUS = "activeRadius";
+    }
 
-		String AUTH_TOKEN = "auth_token";
-		String CHANNEL = "channel";
-	}
-	
-	public interface IUnsubscribeChannel {
-		String REQUEST = "/unsubscribe";
+    public interface IApplyMark{
+        String REQUEST = "/writeTag";
 
-		String AUTH_TOKEN = "auth_token";
-		String CHANNEL = "channel";
-	}
-	
-	public interface IAvailableChannel {
-		String REQUEST = "/channels";
+        String AUTH_TOKEN = "auth_token";
+        String CHANNEL = "channel";
+        String TITLE = "title";
+        String LINK = "link";
+        String DESCRIPTION = "description";
+        String LATITUDE = "latitude";
+        String LONGITUDE = "longitude";
+        String TIME = "time";
+    }
 
-		String AUTH_TOKEN = "auth_token";
-	}
-	
-	public interface IFilterChannel {
-		String REQUEST = "/filterChannel";
-		
-		String AUTH_TOKEN = "auth_token";
-		String CHANNEL = "channel";
-		String AMOUNT = "amount";
-	}
-	
-	public interface ISubscribedChannel {
-		String REQUEST = "/subscribed";
+    public interface IResponse{
+        String STATUS = "status";
+        String STATUS_DESCRIPTION = "status_description";
+        String AUTH_TOKEN = "auth_token";
 
-		String AUTH_TOKEN = "auth_token";
-	}
-	
-	public interface ILoadTags {
-		String REQUEST = "/loadTags";
+        String OK_STATUS = "Ok";
+        String ERROR_STATUS = "Error";
 
-		String AUTH_TOKEN = "auth_token";
-		String LATITUDE = "latitude";
-		String LONGITUDE = "longitude";
-		String RADIUS = "radius";
-	}
-	
+        String USER_EXTSTS = "Username already exists!";
+        String CHANNEL_EXTSTS = "Channel exists!";
+    }
+
+    public interface IBaseFilter{
+        String AUTH_TOKEN 		= "auth_token";
+        String TIME_FROM 		= "time_from";
+        String TIME_TO 			= "time_to";
+
+        String ALT_SHIFT 		= "altitude_shift";
+        String ALT1 			= "altitude1";
+        String ALT2 			= "altitude2";
+    }
+
+    public interface ISubscribeChannel {
+        String REQUEST = "/subscribe";
+
+        String AUTH_TOKEN = "auth_token";
+        String CHANNEL = "channel";
+    }
+
+    public interface IUnsubscribeChannel {
+        String REQUEST = "/unsubscribe";
+
+        String AUTH_TOKEN = "auth_token";
+        String CHANNEL = "channel";
+    }
+
+    public interface IAvailableChannel {
+        String REQUEST = "/channels";
+
+        String AUTH_TOKEN = "auth_token";
+    }
+
+    public interface IFilterChannel {
+        String REQUEST = "/filterChannel";
+
+        String AUTH_TOKEN = "auth_token";
+        String CHANNEL = "channel";
+        String AMOUNT = "amount";
+    }
+
+    public interface ISubscribedChannel {
+        String REQUEST = "/subscribed";
+
+        String AUTH_TOKEN = "auth_token";
+    }
+
+    public interface ILoadTags {
+        String REQUEST = "/loadTags";
+
+        String AUTH_TOKEN = "auth_token";
+        String LATITUDE = "latitude";
+        String LONGITUDE = "longitude";
+        String RADIUS = "radius";
+    }
+
     public interface IRegisterUser {
         String REQUEST = "/registerUser";
 
@@ -150,7 +150,7 @@ public interface IRequest {
         String PASSWORD = "password";
         String EMAIL = "email";
     }
-    
+
     public interface IRestorePassword {
         String REQUEST = "/restorePassword";
 

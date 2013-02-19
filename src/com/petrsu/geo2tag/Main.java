@@ -113,7 +113,7 @@ public class Main extends Activity {
 
             // open activity with list of channels
             Intent intent = new Intent(getApplicationContext(), ChannelsActivity.class);
-            intent.putExtra("API_RESPONSE", response.toString());
+            intent.putExtra("API_RESPONSE", response);
             startActivityForResult(intent, 1);
         }
     }
