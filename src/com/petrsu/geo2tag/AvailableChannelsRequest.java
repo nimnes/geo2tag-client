@@ -15,13 +15,11 @@ import static com.petrsu.geo2tag.IRequest.IAvailableChannel.*;
  */
 public class AvailableChannelsRequest extends BaseRequest {
     private String m_authToken;
-    private String m_channel;
     private String m_serverUrl;
     private AsyncRunner.RequestListener m_listener;
 
-    public AvailableChannelsRequest(String authToken, String channel, String serverUrl, AsyncRunner.RequestListener listener) {
+    public AvailableChannelsRequest(String authToken, String serverUrl, AsyncRunner.RequestListener listener) {
         m_authToken = authToken;
-        m_channel = channel;
         m_serverUrl = serverUrl;
         m_listener = listener;
     }
@@ -30,11 +28,10 @@ public class AvailableChannelsRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "subscribe");
+            jsonObject.put(METHOD, "channels");
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(AUTH_TOKEN, m_authToken);
-            paramsObject.put(CHANNEL, m_channel);
             jsonObject.put("params", paramsObject);
         } catch (Exception e) {
             Log.e(REQUEST_LOG, e.getLocalizedMessage());

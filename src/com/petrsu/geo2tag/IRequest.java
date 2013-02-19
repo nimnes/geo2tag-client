@@ -35,7 +35,11 @@
 package com.petrsu.geo2tag;
 
 public interface IRequest {
-		
+
+    public interface ICommon {
+        String METHOD = "method";
+    }
+
 	public interface ILogin{
 		String REQUEST = "/login";
 		

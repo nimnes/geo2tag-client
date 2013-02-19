@@ -10,25 +10,43 @@ package com.petrsu.geo2tag;
 
 import android.util.Log;
 import org.json.JSONObject;
+import com.petrsu.geo2tag.AsyncRunner.RequestListener;
 
+import static com.petrsu.geo2tag.IRequest.ICommon.METHOD;
 import static com.petrsu.geo2tag.IRequest.ISubscribeChannel.*;
 
 public class SubscribeRequest extends BaseRequest {
     private String m_authToken;
+    private String m_channel;
     private String m_serverUrl;
+    private RequestListener m_listener;
 
-    public SubscribeRequest(String authToken, String serverUrl) {
+    public SubscribeRequest(String authToken, String channel, String serverUrl, RequestListener listener) {
         m_authToken = authToken;
+        m_channel = channel;
         m_serverUrl = serverUrl;
+        m_listener = listener;
     }
 
     public JSONObject getJsonRequest() {
+        JSONObject jsonObject = null;
         try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put(AUTH_TOKEN, m_authToken);
+            jsonObject = new JSONObject();
+            jsonObject.put(METHOD, "subscribe");
 
+            JSONObject paramsObject = new JSONObject();
+            paramsObject.put(AUTH_TOKEN, m_authToken);
+            paramsObject.put(CHANNEL, m_channel);
+            jsonObject.put("params", paramsObject);
         } catch (Exception e) {
-            Log.e("", e.getLocalizedMessage());
+            Log.e(REQUEST_LOG, e.getLocalizedMessage());
         }
+
+        return jsonObject;
+    }
+
+    public void doRequest() {
+        AsyncRunner asyncRunner = new AsyncRunner(m_listener, m_serverUrl);
+        asyncRunner.doInBackground(getJsonRequest());
     }
 }

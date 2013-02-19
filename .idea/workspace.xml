@@ -6,43 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribeRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribedRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/UnsubscribeRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\libs\jgeo.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\ant.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\build.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\gen\com\example\untitled\BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\gen\com\example\untitled\Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\gen\com\example\untitled\R.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\local.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\proguard-project.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\project.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\drawable-hdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\drawable-ldpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\drawable-mdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\layout\main.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\res\values\strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\untitled\untitled.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Channel.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Channel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Geo2Tag.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Geo2Tag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/Manifest.java" afterPath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/Manifest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/R.java" afterPath="$PROJECT_DIR$/gen/com/petrsu/geo2tag/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribeRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribeRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribedRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribedRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/UnsubscribeRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/UnsubscribeRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geo2tag-client.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361202431114" ignored="false" />
+    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361252555891" ignored="false" />
     <file path="/IRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361205254316" ignored="false" />
     <file path="/SubscribeChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361204841743" ignored="false" />
     <file path="/BaseRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361207487172" ignored="false" />
@@ -70,7 +53,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -105,6 +87,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -118,9 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribeRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="56" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,9 +110,16 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="63" column="59" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRequest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="130" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.33846155">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,9 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="81" column="59" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,9 +155,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="0" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,17 +164,15 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="49" column="51" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseRequestListener.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseRequestListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3876652">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,9 +184,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="36" column="22" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -279,8 +259,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,6 +311,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,8 +329,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Android Application.geo2tag-client">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -384,19 +364,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -422,6 +389,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -526,7 +506,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1864" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1864" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -537,7 +517,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -548,6 +527,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -612,18 +592,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="13" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java">
@@ -637,9 +608,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="35" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribedRequest.java">
@@ -670,27 +639,21 @@
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="51" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/SubscribeRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="56" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="59" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,39 +671,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="59" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="22" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3876652">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="63" column="59" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="130" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.33846155">
+          <folding />
         </state>
       </provider>
     </entry>
