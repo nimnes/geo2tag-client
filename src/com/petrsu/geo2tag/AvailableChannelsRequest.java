@@ -28,7 +28,7 @@ public class AvailableChannelsRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "channels");
+            jsonObject.put(METHOD, REQUEST);
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(AUTH_TOKEN, m_authToken);

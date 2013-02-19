@@ -17,8 +17,8 @@ import com.petrsu.geo2tag.objects.*;
 
 public class Main extends Activity {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
-    public final static String SERVER_URL = "http://192.168.112.107/service/";
-    public User m_user = null;
+    public final static String SERVER_URL = "http://192.168.112.107/service";
+    private User m_user;
 
     /**
      * Called when the activity is first created.
@@ -28,10 +28,10 @@ public class Main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        m_user = new User();
+        m_user = User.getInstance();
 
         ListView listView = (ListView) findViewById(R.id.options_list);
-        String[] values = new String[] {"Available channels", "Tags"};
+        String[] values = new String[] {"Available channels", "Add channel", "Tags"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
                 android.R.id.text1, values);
@@ -74,14 +74,14 @@ public class Main extends Activity {
                     // compare old subscribed channels list with new
                     // and subscribe/unsubscribe to channels
                     for (String cn : subscribedChannels) {
-                        if (!Geo2Tag.getInstance().subscribedChannels.contains(cn)) {
+                        if (!m_user.hasChannel(cn)) {
                             SubscribeRequest subscribeRequest = new SubscribeRequest(m_user.getToken(), cn, SERVER_URL,
                                     new SubscribeRequestListener());
                             subscribeRequest.doRequest();
                         }
                     }
 
-                    for (String cn : Geo2Tag.getInstance().subscribedChannels) {
+                    for (String cn : m_user.getSubscribedChannels()) {
                         if (!subscribedChannels.contains(cn)) {
                             UnsubscribeRequest unsubscribeRequest = new UnsubscribeRequest(m_user.getToken(), cn,
                                     SERVER_URL, new UnSubscribeRequestListener());
@@ -96,7 +96,7 @@ public class Main extends Activity {
     public class LoginRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
-            Log.i("GEO2TAG_API", "Authentication successfull!");
+            Log.i(LISTENER_LOG, "Authentication successfull!");
             try {
                 JSONObject responseJSON = new JSONObject(response);
                 m_user.setToken(responseJSON.getString("auth_token"));
@@ -104,18 +104,27 @@ public class Main extends Activity {
                 e.printStackTrace();
             }
         }
+
+        @Override
+        public void onGeo2TagError(final int errorCode) {
+            if (errorCode != 0) {
+                User.getInstance().setName("");
+                User.getInstance().setPass("");
+                User.getInstance().setToken("");
+            }
+        }
     }
     public class RegisterUserListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
-            Log.i("GEO2TAG_API", "Registration successfull!");
+            Log.i(LISTENER_LOG, "Registration successfull!");
         }
     }
 
     public class AvailableChannelsRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
-            Log.i("GEO2TAG_API", "Got available channels.");
+            Log.i(LISTENER_LOG, "Got available channels.");
 
             // open activity with list of channels
             Intent intent = new Intent(getApplicationContext(), ChannelsActivity.class);
@@ -127,12 +136,13 @@ public class Main extends Activity {
     public class SubscribedRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
-            Log.i("GEO2TAG_API", "Got subscribed channels.");
             try {
                 JSONArray jsonArray = new JSONObject(response).getJSONArray("channels");
+                Log.i(LISTENER_LOG, "Got subscribed channels.");
+
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject c = jsonArray.getJSONObject(i);
-                    Geo2Tag.getInstance().subscribedChannels.add(c.getString("name"));
+                    m_user.addChannel(c.getString("name"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -146,8 +156,9 @@ public class Main extends Activity {
             try {
                 JSONObject jsonObject = new JSONObject(response);
                 String channelName = jsonObject.getString("channel");
-                Geo2Tag.getInstance().subscribedChannels.add(channelName);
-                Log.i("GEO2TAG_API", "Subscribed to channel: " + channelName);
+                m_user.addChannel(channelName);
+
+                Log.i(LISTENER_LOG, "Subscribed to channel: " + channelName);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -160,8 +171,9 @@ public class Main extends Activity {
             try {
                 JSONObject jsonObject = new JSONObject(response);
                 String channelName = jsonObject.getString("channel");
-                Geo2Tag.getInstance().subscribedChannels.remove(channelName);
-                Log.i("GEO2TAG_API", "Unsubscribed from channel: " + channelName);
+                m_user.removeChannel(channelName);
+
+                Log.i(LISTENER_LOG, "Unsubscribed from channel: " + channelName);
             } catch (JSONException e) {
                 e.printStackTrace();
             }

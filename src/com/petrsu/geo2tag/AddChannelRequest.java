@@ -3,27 +3,33 @@ package com.petrsu.geo2tag;
 import android.util.Log;
 import org.json.JSONObject;
 
+import static com.petrsu.geo2tag.IRequest.IApplyChannel.*;
 import static com.petrsu.geo2tag.IRequest.ICommon.METHOD;
-import static com.petrsu.geo2tag.IRequest.ISubscribeChannel.AUTH_TOKEN;
-import static com.petrsu.geo2tag.IRequest.ISubscribeChannel.CHANNEL;
-import static com.petrsu.geo2tag.IRequest.ISubscribeChannel.REQUEST;
+import com.petrsu.geo2tag.AsyncRunner.RequestListener;
 
 /**
  * Created with IntelliJ IDEA.
  * User: nimnes
- * Date: 18.02.13
- * Time: 21:34
- * To change this template use File | Settings | File Templates.
+ * Date: 19.02.13
+ * Time: 15:43
+ * Project: com.petrsu.geo2tag
  */
-public class UnsubscribeRequest extends BaseRequest {
+public class AddChannelRequest extends BaseRequest {
     private String m_authToken;
-    private String m_channel;
     private String m_serverUrl;
-    private AsyncRunner.RequestListener m_listener;
+    private String m_name;
+    private String m_description;
+    private String m_url;
+    private Integer m_activeRadius;
+    private RequestListener m_listener;
 
-    public UnsubscribeRequest(String authToken, String channel, String serverUrl, AsyncRunner.RequestListener listener) {
+    public AddChannelRequest(String authToken, String name, String description, String url, Integer activeRadius,
+                             String serverUrl, RequestListener listener) {
         m_authToken = authToken;
-        m_channel = channel;
+        m_name = name;
+        m_description = description;
+        m_url = url;
+        m_activeRadius = activeRadius;
         m_serverUrl = serverUrl;
         m_listener = listener;
     }
@@ -36,7 +42,10 @@ public class UnsubscribeRequest extends BaseRequest {
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(AUTH_TOKEN, m_authToken);
-            paramsObject.put(CHANNEL, m_channel);
+            paramsObject.put(NAME, m_name);
+            paramsObject.put(DESCRIPTION, m_description);
+            paramsObject.put(URL, m_url);
+            paramsObject.put(ACTIVE_RADIUS, m_activeRadius);
             jsonObject.put("params", paramsObject);
         } catch (Exception e) {
             Log.e(REQUEST_LOG, e.getLocalizedMessage());

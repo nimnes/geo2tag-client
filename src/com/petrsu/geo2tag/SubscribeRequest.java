@@ -32,7 +32,7 @@ public class SubscribeRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "subscribe");
+            jsonObject.put(METHOD, REQUEST);
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(AUTH_TOKEN, m_authToken);

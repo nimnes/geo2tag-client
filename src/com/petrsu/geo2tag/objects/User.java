@@ -35,40 +35,65 @@
 
 package com.petrsu.geo2tag.objects;
 
-public class User {
-	private String name;
-	private String pass;
-	private String token;
+import java.util.ArrayList;
 
-	public User(){
-	}
-	
-	public User(String name, String pass, String token){
-		this(name, pass);
-		this.token = token;
-	}
-	
-	public User(String name, String pass){
-		this.name = name;
-		this.pass = pass;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPass() {
-		return pass;
-	}
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-	public String getToken() {
-		return token;
-	}
-	public void setToken(String token) {
-		this.token = token;
-	}
+public class User {
+    private static User instance = null;
+    private String name;
+    private String pass;
+    private String token;
+    private ArrayList<String> subscribedChannels;
+
+    public User() {
+        subscribedChannels = new ArrayList<String>();
+    }
+
+    public static User getInstance() {
+        if (instance == null) {
+            instance = new User();
+        }
+        return instance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public ArrayList<String> getSubscribedChannels() {
+        return this.subscribedChannels;
+    }
+
+    public void addChannel(String name) {
+        if (!this.subscribedChannels.contains(name)) {
+            this.subscribedChannels.add(name);
+        }
+    }
+
+    public void removeChannel(String name) {
+        this.subscribedChannels.remove(name);
+    }
+
+    public boolean hasChannel(String name) {
+        return this.subscribedChannels.contains(name);
+    }
 }

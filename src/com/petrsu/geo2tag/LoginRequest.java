@@ -32,7 +32,7 @@ public class LoginRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "login");
+            jsonObject.put(METHOD, REQUEST);
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(LOGIN, m_login);

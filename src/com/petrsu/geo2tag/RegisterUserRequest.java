@@ -33,7 +33,7 @@ public class RegisterUserRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "registerUser");
+            jsonObject.put(METHOD, REQUEST);
 
             JSONObject paramsObject = new JSONObject();
             paramsObject.put(LOGIN, m_login);

@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.petrsu.geo2tag.objects.User;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -51,7 +52,9 @@ public class ChannelsActivity extends Activity {
 
                 String name = c.getString("name");
                 String description = c.getString("description");
-                boolean subscribed = Geo2Tag.getInstance().subscribedChannels.contains(name);
+
+                User user = User.getInstance();
+                boolean subscribed = user.hasChannel(name);
                 Channel ch = new Channel(name, description, subscribed);
 
                 channelsList.add(ch);

@@ -12,8 +12,9 @@ import com.petrsu.geo2tag.AsyncRunner.RequestListener;
  */
 // base request listener with simple handling of geo2tag errors
 public abstract class BaseRequestListener implements RequestListener {
-    @Override
+    public String LISTENER_LOG = "RequestListener";
+
     public void onGeo2TagError(final int errorCode) {
-        Log.e("BaseRequestListener", "Error: " + errorCode);
+        Log.e(LISTENER_LOG, "Error: " + errorCode);
     }
 }

@@ -36,36 +36,36 @@
 package com.petrsu.geo2tag.objects;
 
 public class GeoPoint {
-	
-	private double x;
-	private double y;
-	
+
+    private double x;
+    private double y;
+
     public GeoPoint() {}
 
     public GeoPoint(double x, double y) {
         this.x = x;
         this.y = y; 
     }
-    
+
     public GeoPoint(GeoPoint p) { 
         this.x = p.x;
         this.y = p.y;
     }
-    
+
     public final void set(float x, float y) {
         this.x = x;
         this.y = y;
     }
-    
+
     public final void set(GeoPoint p) { 
         this.x = p.x;
         this.y = p.y;
     }
-    
+
     public double x() { 
         return x;
     }
-    
+
     public double y() { 
         return y;
     }

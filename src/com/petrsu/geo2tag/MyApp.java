@@ -2,6 +2,7 @@ package com.petrsu.geo2tag;
 
 import android.app.Application;
 import android.content.Context;
+import com.petrsu.geo2tag.objects.User;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +13,7 @@ import android.content.Context;
  */
 public class MyApp extends Application {
     private static Context context;
+    private User user;
 
     public void onCreate(){
         super.onCreate();
