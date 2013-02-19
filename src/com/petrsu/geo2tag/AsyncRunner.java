@@ -74,6 +74,7 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
     }
 
     protected void onPostExecute(JSONObject result) {
+        Log.i(ASYNC_LOG, result.toString());
         if (result == null) {
             m_listener.onGeo2TagError(-1);
             return;

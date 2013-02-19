@@ -17,7 +17,7 @@ import com.petrsu.geo2tag.objects.*;
 
 public class Main extends Activity {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
-    public final static String SERVER_URL = "http://debug.geo2tag.org/service/";
+    public final static String SERVER_URL = "http://192.168.112.107/service/";
     public User m_user = null;
 
     /**
@@ -37,8 +37,13 @@ public class Main extends Activity {
                 android.R.id.text1, values);
         listView.setAdapter(adapter);
 
+//        RegisterUserRequest registerUserRequest = new RegisterUserRequest("nimnes", "geo2tag", "nimnes@gmail.com", SERVER_URL,
+//                new RegisterUserListener());
+//        registerUserRequest.doRequest();
+
+        m_user.setToken("1b39d6a84725954d3ab8ff43cbd47b96");
         if (m_user.getToken() == null) {
-            LoginRequest loginRequest = new LoginRequest("nimnes", "geo2tag", SERVER_URL, new LoginRequestListener());
+            LoginRequest loginRequest = new LoginRequest("kulakov", "123", SERVER_URL, new LoginRequestListener());
             loginRequest.doRequest();
         }
 
@@ -96,13 +101,19 @@ public class Main extends Activity {
     public class LoginRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
-            Log.i("GEO2TAG_API", "Authentication success!");
+            Log.i("GEO2TAG_API", "Authentication successfull!");
             try {
                 JSONObject responseJSON = new JSONObject(response);
                 m_user.setToken(responseJSON.getString("auth_token"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+    }
+    public class RegisterUserListener extends BaseRequestListener {
+        @Override
+        public void onComplete(final String response) {
+            Log.i("GEO2TAG_API", "Registration successfull!");
         }
     }
 

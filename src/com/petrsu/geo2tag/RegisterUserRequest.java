@@ -4,22 +4,27 @@ import android.util.Log;
 import org.json.JSONObject;
 
 import static com.petrsu.geo2tag.IRequest.ICommon.METHOD;
-import static com.petrsu.geo2tag.IRequest.ISubscribedChannel.*;
+import static com.petrsu.geo2tag.IRequest.IRegisterUser.*;
+import com.petrsu.geo2tag.AsyncRunner.RequestListener;
 
 /**
  * Created with IntelliJ IDEA.
  * User: nimnes
- * Date: 18.02.13
- * Time: 21:36
- * To change this template use File | Settings | File Templates.
+ * Date: 19.02.13
+ * Time: 13:41
+ * Project: com.petrsu.geo2tag
  */
-public class SubscribedRequest extends BaseRequest {
-    private String m_authToken;
+public class RegisterUserRequest extends BaseRequest {
+    private String m_login;
+    private String m_password;
     private String m_serverUrl;
+    private String m_email;
     private AsyncRunner.RequestListener m_listener;
 
-    public SubscribedRequest(String authToken, String serverUrl, AsyncRunner.RequestListener listener) {
-        m_authToken = authToken;
+    public RegisterUserRequest(String login, String password, String email, String serverUrl, RequestListener listener) {
+        m_login = login;
+        m_password = password;
+        m_email = email;
         m_serverUrl = serverUrl;
         m_listener = listener;
     }
@@ -28,10 +33,12 @@ public class SubscribedRequest extends BaseRequest {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject();
-            jsonObject.put(METHOD, "subscribed");
+            jsonObject.put(METHOD, "registerUser");
 
             JSONObject paramsObject = new JSONObject();
-            paramsObject.put(AUTH_TOKEN, m_authToken);
+            paramsObject.put(LOGIN, m_login);
+            paramsObject.put(PASSWORD, m_password);
+            paramsObject.put(EMAIL, m_email);
             jsonObject.put("params", paramsObject);
         } catch (Exception e) {
             Log.e(REQUEST_LOG, e.getLocalizedMessage());
