@@ -32,13 +32,13 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
         m_user = User.getInstance();
 
         ListView listView = (ListView) findViewById(R.id.options_list);
-        String[] values = new String[] {"Available channels", "Add channel", "Tags"};
+        String[] values = new String[] {"Available channels", "Add channel", "Tags", "Map"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
                 android.R.id.text1, values);
         listView.setAdapter(adapter);
 
-        m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
+//        m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
         if (m_user.getToken() == null) {
             AuthorizationDialog authorizationDialog = new AuthorizationDialog();
             authorizationDialog.show(getSupportFragmentManager(), "dialog_authorization");
@@ -74,6 +74,10 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
                 LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
                         61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
                 loadTagsRequest.doRequest();
+                break;
+            case 3:
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                startActivityForResult(intent, 3);
                 break;
         }
     }
