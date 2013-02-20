@@ -39,6 +39,7 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
                 android.R.id.text1, values);
         listView.setAdapter(adapter);
 
+        m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
         if (m_user.getToken() == null) {
             LoginRequest loginRequest = new LoginRequest("nimnes", "geo2tag", SERVER_URL, new LoginRequestListener());
             loginRequest.doRequest();
@@ -186,8 +187,18 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
         }
     }
 
+    public class AddChannelRequestListener extends BaseRequestListener {
+        @Override
+        public void onComplete(final String response) {
+            Log.i(LISTENER_LOG, "Channel created");
+        }
+    }
+
     @Override
-    public void onAddChannelDialogPositiveClick(DialogFragment dialog) {
-        Log.i("DIALOG", "test");
+    public void onAddChannelDialogPositiveClick(Bundle dialogResult) {
+        AddChannelRequest addChannelRequest = new AddChannelRequest(m_user.getToken(), dialogResult.getString("name"),
+                dialogResult.getString("description"), dialogResult.getString("url"),
+                dialogResult.getInt("activeRadius"), SERVER_URL, new AddChannelRequestListener());
+        addChannelRequest.doRequest();
     }
 }

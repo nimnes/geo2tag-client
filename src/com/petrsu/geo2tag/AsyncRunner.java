@@ -7,6 +7,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import static com.petrsu.geo2tag.IRequest.ICommon.*;
@@ -46,9 +48,11 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
             HttpPost httpPost = new HttpPost(m_serverUrl + requestJSON.getString(METHOD));
             Log.i(ASYNC_LOG, m_serverUrl + requestJSON.getString(METHOD));
 
-            httpPost.setHeader("content-type", "application/json");
+//            httpPost.setHeader("content-type", "application/json");
 
             StringEntity entity = new StringEntity(requestJSON.getJSONObject("params").toString());
+            entity.setContentEncoding(new BasicHeader(HTTP.CONTENT_ENCODING, "application/json"));
+            entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
             httpPost.setEntity(entity);
 
             Log.i(ASYNC_LOG, requestJSON.toString());
@@ -61,9 +65,9 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
 
             // add channel name to response for subscribe/unsubscribe requests
             // for defining which channel we subscribed/unsubscribed
-            if (requestJSON.getString(METHOD).equals("subscribe/") ||
-                    requestJSON.getString(METHOD).equals("unsubscribe/")) {
-                responseJSON.put("channel", requestJSON.getString("channel"));
+            if (requestJSON.getString(METHOD).equals("/subscribe") ||
+                    requestJSON.getString(METHOD).equals("/unsubscribe")) {
+                responseJSON.put("channel", requestJSON.getJSONObject("params").getString("channel"));
             }
         } catch (Exception e) {
             e.printStackTrace();

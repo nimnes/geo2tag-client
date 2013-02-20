@@ -3,10 +3,7 @@ package com.petrsu.geo2tag;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,12 +13,10 @@ import com.petrsu.geo2tag.objects.User;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.widget.AdapterView.OnItemClickListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.petrsu.geo2tag.objects.Channel;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -54,8 +49,9 @@ public class ChannelsActivity extends Activity {
                 String description = c.getString("description");
 
                 User user = User.getInstance();
-                boolean subscribed = user.hasChannel(name);
-                Channel ch = new Channel(name, description, subscribed);
+                Channel ch = new Channel(name);
+                ch.setSubscribed(user.hasChannel(name));
+                ch.setDescription(description);
 
                 channelsList.add(ch);
             }
@@ -127,7 +123,7 @@ public class ChannelsActivity extends Activity {
                 ArrayList<String> subscribedChannels = new ArrayList<String>();
                 for (int i = 0; i < channelsList.size(); i++) {
                     if (channelsList.get(i).isSubscribed()) {
-                        subscribedChannels.add(channelsList.get(i).name);
+                        subscribedChannels.add(channelsList.get(i).getName());
                     }
                 }
 

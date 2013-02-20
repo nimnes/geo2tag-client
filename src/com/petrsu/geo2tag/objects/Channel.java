@@ -45,6 +45,7 @@ public class Channel {
     private String description;
     private String language;
     private String pubDate;
+    private boolean subscribed;
     private List<Mark> marks = new ArrayList<Mark>();
 
     public Channel() {
@@ -52,6 +53,14 @@ public class Channel {
 
     public Channel(String name) {
         this.name = name;
+    }
+
+    public boolean isSubscribed() {
+        return this.subscribed;
+    }
+
+    public void setSubscribed(boolean subscribed) {
+        this.subscribed = subscribed;
     }
 
     public Channel(String name, String title, String link, String description,

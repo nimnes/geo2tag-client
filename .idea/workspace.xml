@@ -23,15 +23,19 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Dialog" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Asyncr" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_channel.xml" />
+      <change type="DELETED" beforePath="C:\GitHub\geo2tag-client\src\com\petrsu\geo2tag\Channel.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geo2tag-client.iws" />
@@ -40,26 +44,26 @@
     <file path="/IRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361205254316" ignored="false" />
     <file path="/SubscribeChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361204841743" ignored="false" />
     <file path="/BaseRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361207487172" ignored="false" />
-    <file path="/AsyncRunner.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274897878" ignored="false" />
+    <file path="/AsyncRunner.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361346876899" ignored="false" />
     <file path="/SubscribeRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274638265" ignored="false" />
     <file path="/LoginRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274608439" ignored="false" />
-    <file path="/Channel.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361206266832" ignored="false" />
-    <file path="/Main.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342091431" ignored="false" />
-    <file path="/ChannelsActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361278142534" ignored="false" />
+    <file path="/Channel.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342796746" ignored="false" />
+    <file path="/Main.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361348071554" ignored="false" />
+    <file path="/ChannelsActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342936545" ignored="false" />
     <file path="/BaseRequestListener.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277132206" ignored="false" />
     <file path="/UnsubscribeRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274645759" ignored="false" />
     <file path="/SubscribedRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274629454" ignored="false" />
     <file path="/ChannelsRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361209141057" ignored="false" />
     <file path="/AvailableChannelsRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274623653" ignored="false" />
     <file path="/RegisterUserRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274591904" ignored="false" />
-    <file path="/AddChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274544417" ignored="false" />
+    <file path="/AddChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361347290835" ignored="false" />
     <file path="/User.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277976118" ignored="false" />
     <file path="/MyApp.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277459906" ignored="false" />
     <file path="/AddChannelActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361279948850" ignored="false" />
     <file path="/add_channel.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361280101296" ignored="false" />
     <file path="/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361280992786" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361281646446" ignored="false" />
-    <file path="/AddChannelDialog.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342265614" ignored="false" />
+    <file path="/AddChannelDialog.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361345014586" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +125,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="69" selection-start="7207" selection-end="7207" vertical-scroll-proportion="0.63455147">
+            <state line="41" column="57" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.6993356">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,13 +145,43 @@
       <file leaf-file-name="AddChannelDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="183" selection-end="228" vertical-scroll-proportion="0.0">
+            <state line="42" column="103" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1126#1400#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="e#1454#1675#0" expanded="true" />
-                <element signature="e#1656#1657#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1219#2168#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2222#2411#0" expanded="true" />
+                <element signature="e#2400#2401#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AvailableChannelsRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="37" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="100" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddChannelRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="76" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,40 +192,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_display_message.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_display_message.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channels_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/channels_list.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="46" column="0" selection-start="2268" selection-end="2268" vertical-scroll-proportion="-20.24">
               <folding />
             </state>
           </provider>
@@ -200,16 +201,27 @@
       <file leaf-file-name="ChannelsActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="13" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0">
+            <state line="20" column="46" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="33" selection-start="3151" selection-end="3151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Channel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Channel.java">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+            <state line="63" column="5" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,21 +246,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/UnsubscribeRequest.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/GeoPoint.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/MyApp.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/User.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java" />
         <option value="$PROJECT_DIR$/res/layout/add_channel.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
       </list>
     </option>
@@ -319,6 +331,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geo2tag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo2tag-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo2tag-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo2tag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,7 +622,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298109" sideWeight="0.6723769" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -605,9 +641,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.6723769" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -672,20 +706,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="37" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/jw-0425-designpatterns/singleton-src/classic/ClassicSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="83" selection-start="64" selection-end="64" vertical-scroll-proportion="0.07333333" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/MyApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="105" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
@@ -702,25 +722,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="131" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/BaseRequestListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="53" selection-start="455" selection-end="504" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -735,29 +739,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="13" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/channels_list.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/add_channel.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -769,6 +756,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="5" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="33" selection-start="3151" selection-end="3151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="46" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/add_channel.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="2268" selection-end="2268" vertical-scroll-proportion="-20.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="90" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0">
@@ -776,21 +796,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="37" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="76" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="183" selection-end="228" vertical-scroll-proportion="0.0">
+        <state line="42" column="103" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1126#1400#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1454#1675#0" expanded="true" />
-            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1219#2168#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2222#2411#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="100" selection-start="2816" selection-end="2816" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="69" selection-start="7207" selection-end="7207" vertical-scroll-proportion="0.63455147">
+        <state line="41" column="57" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.6993356">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

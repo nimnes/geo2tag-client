@@ -7,6 +7,9 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
+import com.petrsu.geo2tag.objects.Channel;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +20,7 @@ import android.view.LayoutInflater;
  */
 public class AddChannelDialog extends DialogFragment {
     public interface AddChannelDialogListener {
-        public void onAddChannelDialogPositiveClick(DialogFragment dialog);
+        public void onAddChannelDialogPositiveClick(Bundle dialogResult);
     }
 
     AddChannelDialogListener m_listener;
@@ -29,19 +32,29 @@ public class AddChannelDialog extends DialogFragment {
 
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.add_channel, null))
-                // Add action buttons
-                .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        m_listener.onAddChannelDialogPositiveClick(AddChannelDialog.this);
-                    }
-                })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        AddChannelDialog.this.getDialog().cancel();
-                    }
-                });
+        final View view = inflater.inflate(R.layout.add_channel, null);
+        builder.setView(view);
+        builder.setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                String name = ((EditText) view.findViewById(R.id.channelName)).getText().toString();
+                String description = ((EditText) view.findViewById(R.id.description)).getText().toString();
+                String url = ((EditText) view.findViewById(R.id.url)).getText().toString();
+                Integer activeRadius = Integer.parseInt(((EditText) view.findViewById(R.id.activeRadius)).getText().toString());
+
+                Bundle dialogResult = new Bundle();
+                dialogResult.putString("name", name);
+                dialogResult.putString("description", description);
+                dialogResult.putString("url", url);
+                dialogResult.putInt("activeRadius", activeRadius);
+                m_listener.onAddChannelDialogPositiveClick(dialogResult);
+            }
+        });
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                AddChannelDialog.this.getDialog().cancel();
+            }
+        });
         builder.setTitle(R.string.title_add_channel_activity);
         return builder.create();
     }
