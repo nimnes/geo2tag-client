@@ -14,4 +14,10 @@
     <string name="active_radius_title">Active radius</string>
     <string name="add">Add</string>
     <string name="cancel">Cancel</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="geo2tag_client">Geo2tag Client</string>
+    <string name="registration">Registration</string>
+    <string name="email">Email</string>
+    <string name="signin">Sign in</string>
 </resources>
