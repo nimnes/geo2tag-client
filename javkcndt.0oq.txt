@@ -1,0 +1,19 @@
+add LoadTags request and listener
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 1 different commit each, respectively.
+#
+# You are currently rebasing.
+#   (all conflicts fixed: run "git rebase --continue")
+#
+# Changes to be committed:
+#   (use "git reset HEAD^1 <file>..." to unstage)
+#
+#	modified:   .idea/workspace.xml
+#	new file:   src/com/petrsu/geo2tag/LoadTagsRequest.java
+#	modified:   src/com/petrsu/geo2tag/Main.java
+#
+
