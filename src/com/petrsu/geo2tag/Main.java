@@ -1,6 +1,5 @@
 package com.petrsu.geo2tag;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -12,7 +11,6 @@ import android.widget.ListView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.support.v4.app.DialogFragment;
 
 import java.util.ArrayList;
 import com.petrsu.geo2tag.objects.*;
@@ -45,14 +43,16 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
             loginRequest.doRequest();
         }
 
+        SubscribedRequest subscribedRequest = new SubscribedRequest(m_user.getToken(), SERVER_URL,
+                new SubscribedRequestListener());
+        subscribedRequest.doRequest();
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 onOptionSelected(position);
             }
         });
-
-
     }
 
     private void onOptionSelected(int itemIndex) {
@@ -65,6 +65,12 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
             case 1:
                 AddChannelDialog addChannelDialog = new AddChannelDialog();
                 addChannelDialog.show(getSupportFragmentManager(), "add_channel");
+                break;
+            case 2:
+                // Petrozavodsk tags
+                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
+                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
+                loadTagsRequest.doRequest();
                 break;
         }
     }
@@ -100,6 +106,9 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
         }
     }
 
+    /***
+     * Listeners for handling responses from Geo2Tag server
+     ***/
     public class LoginRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
@@ -191,6 +200,13 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
         @Override
         public void onComplete(final String response) {
             Log.i(LISTENER_LOG, "Channel created");
+        }
+    }
+
+    public class LoadTagsRequestListener extends BaseRequestListener {
+        @Override
+        public void onComplete(final String response) {
+            Log.i(LISTENER_LOG, "Tags loaded");
         }
     }
 
