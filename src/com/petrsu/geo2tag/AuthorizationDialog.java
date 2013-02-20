@@ -6,8 +6,11 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.EditText;
+import android.widget.CheckBox;
+import android.view.View;
+import android.widget.CompoundButton;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +21,7 @@ import android.view.LayoutInflater;
  */
 public class AuthorizationDialog extends DialogFragment {
     public interface AuthorizationDialogListener {
-        public void onAuthorizationDialogPositiveClick(DialogFragment dialog);
+        public void onAuthorizationDialogPositiveClick(Bundle dialogResult);
     }
 
     AuthorizationDialogListener m_listener;
@@ -28,11 +31,23 @@ public class AuthorizationDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
 
+        final View view = inflater.inflate(R.layout.dialog_authorization, null);
+
         builder.setView(inflater.inflate(R.layout.dialog_authorization, null))
                 .setPositiveButton(R.string.signin, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Log.i("AuthorizationDialog","sign in");
+                        String username = ((EditText) view.findViewById(R.id.username)).getText().toString();
+                        String password = ((EditText) view.findViewById(R.id.password)).getText().toString();
+                        String email = "";
+                        if (((CheckBox) view.findViewById(R.id.registration)).isChecked())
+                            email = ((EditText) view.findViewById(R.id.email)).getText().toString();
+
+                        Bundle dialogResult = new Bundle();
+                        dialogResult.putString("username", username);
+                        dialogResult.putString("password", password);
+                        dialogResult.putString("email", email);
+                        m_listener.onAuthorizationDialogPositiveClick(dialogResult);
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -40,6 +55,21 @@ public class AuthorizationDialog extends DialogFragment {
                         AuthorizationDialog.this.getDialog().cancel();
                     }
                 });
+
+        CheckBox registration = (CheckBox) view.findViewById(R.id.registration);
+
+        registration.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    ((EditText) view.findViewById(R.id.email)).setVisibility(View.VISIBLE);
+                } else {
+                    ((EditText) view.findViewById(R.id.email)).setVisibility(View.GONE);
+                }
+
+            }
+        });
+
         return builder.create();
     }
 

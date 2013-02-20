@@ -42,8 +42,6 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
         if (m_user.getToken() == null) {
             AuthorizationDialog authorizationDialog = new AuthorizationDialog();
             authorizationDialog.show(getSupportFragmentManager(), "dialog_authorization");
-            LoginRequest loginRequest = new LoginRequest("nimnes", "geo2tag", SERVER_URL, new LoginRequestListener());
-            loginRequest.doRequest();
         }
 
         SubscribedRequest subscribedRequest = new SubscribedRequest(m_user.getToken(), SERVER_URL,
@@ -226,7 +224,13 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
     }
 
     @Override
-    public void onAuthorizationDialogPositiveClick(DialogFragment dialog) {
-        Log.i("AuthorizationDialog", "test");
+    public void onAuthorizationDialogPositiveClick(Bundle dialogResult) {
+        if(dialogResult.getString("email") == "") {
+            LoginRequest loginRequest = new LoginRequest(dialogResult.getString("username"), dialogResult.getString("password"), SERVER_URL, new LoginRequestListener());
+            loginRequest.doRequest();
+        } else {
+            RegisterUserRequest registerUserRequest = new RegisterUserRequest(dialogResult.getString("username"), dialogResult.getString("password"), dialogResult.getString("email"), SERVER_URL, new LoginRequestListener());
+            registerUserRequest.doRequest();
+        }
     }
 }
