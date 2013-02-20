@@ -3,6 +3,7 @@ package com.petrsu.geo2tag;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,11 +12,12 @@ import android.widget.ListView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.support.v4.app.DialogFragment;
 
 import java.util.ArrayList;
 import com.petrsu.geo2tag.objects.*;
 
-public class Main extends Activity {
+public class Main extends FragmentActivity implements AddChannelDialog.AddChannelDialogListener {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
     public final static String SERVER_URL = "http://192.168.112.107/service";
     private User m_user;
@@ -58,6 +60,10 @@ public class Main extends Activity {
                 AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
                         SERVER_URL, new AvailableChannelsRequestListener());
                 availableChannelsRequest.doRequest();
+                break;
+            case 1:
+                AddChannelDialog addChannelDialog = new AddChannelDialog();
+                addChannelDialog.show(getSupportFragmentManager(), "add_channel");
                 break;
         }
     }
@@ -178,5 +184,10 @@ public class Main extends Activity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onAddChannelDialogPositiveClick(DialogFragment dialog) {
+        Log.i("DIALOG", "test");
     }
 }
