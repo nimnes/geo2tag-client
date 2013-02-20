@@ -2,6 +2,7 @@ package com.petrsu.geo2tag;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +16,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import com.petrsu.geo2tag.objects.*;
 
-public class Main extends FragmentActivity implements AddChannelDialog.AddChannelDialogListener {
+public class Main extends FragmentActivity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
     public final static String SERVER_URL = "http://192.168.112.107/service";
     private User m_user;
@@ -39,6 +40,8 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
 
         m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
         if (m_user.getToken() == null) {
+            AuthorizationDialog authorizationDialog = new AuthorizationDialog();
+            authorizationDialog.show(getSupportFragmentManager(), "dialog_authorization");
             LoginRequest loginRequest = new LoginRequest("nimnes", "geo2tag", SERVER_URL, new LoginRequestListener());
             loginRequest.doRequest();
         }
@@ -216,5 +219,10 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
                 dialogResult.getString("description"), dialogResult.getString("url"),
                 dialogResult.getInt("activeRadius"), SERVER_URL, new AddChannelRequestListener());
         addChannelRequest.doRequest();
+    }
+
+    @Override
+    public void onAuthorizationDialogPositiveClick(DialogFragment dialog) {
+        Log.i("AuthorizationDialog", "test");
     }
 }
