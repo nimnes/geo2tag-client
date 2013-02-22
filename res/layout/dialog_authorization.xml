@@ -34,7 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/registration"
-            android:id="@+id/registration" android:layout_gravity="center" android:checked="false"/>
+            android:id="@+id/registration" android:layout_gravity="center"
+            android:focusable="false"/>
     <EditText
             android:id="@+id/email"
             android:inputType="textEmailAddress"
@@ -45,5 +46,6 @@
             android:layout_marginRight="4dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif"
-            android:hint="@string/email" android:visibility="invisible"/>
+            android:hint="@string/email" android:visibility="gone" android:focusable="false"
+            android:focusableInTouchMode="false"/>
 </LinearLayout>
