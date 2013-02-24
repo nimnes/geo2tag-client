@@ -20,22 +20,29 @@
         <option name="nightMode" value="notnight" />
         <option name="targetHashString" value="android-17" />
         <option name="theme" value="Theme" />
+        <option name="visible" value="false" />
       </GlobalState>
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="AUTHORIZATION" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/mainmenu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dialog_authorization.xml" afterPath="$PROJECT_DIR$/res/layout/dialog_authorization.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geo2tag-client.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361547432647" ignored="false" />
+    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361708313721" ignored="false" />
     <file path="/IRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361205254316" ignored="false" />
     <file path="/SubscribeChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361204841743" ignored="false" />
     <file path="/BaseRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361207487172" ignored="false" />
@@ -43,7 +50,7 @@
     <file path="/SubscribeRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274638265" ignored="false" />
     <file path="/LoginRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274608439" ignored="false" />
     <file path="/Channel.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342796746" ignored="false" />
-    <file path="/Main.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361371678918" ignored="false" />
+    <file path="/Main.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361720668417" ignored="false" />
     <file path="/ChannelsActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361342936545" ignored="false" />
     <file path="/BaseRequestListener.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277132206" ignored="false" />
     <file path="/UnsubscribeRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361274645759" ignored="false" />
@@ -56,8 +63,8 @@
     <file path="/MyApp.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277459906" ignored="false" />
     <file path="/AddChannelActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361279948850" ignored="false" />
     <file path="/add_channel.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361280101296" ignored="false" />
-    <file path="/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361371895144" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361372141826" ignored="false" />
+    <file path="/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361720401603" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361713622455" ignored="false" />
     <file path="/AddChannelDialog.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361345014586" ignored="false" />
     <file path="/MapActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361371903644" ignored="false" />
     <file path="/map.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361380524487" ignored="false" />
@@ -84,6 +91,12 @@
     <file path="$PROJECT_DIR$/google-play-services_lib/res/values-iw/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361388583529" ignored="false" />
     <file path="$PROJECT_DIR$/google-play-services_lib/res/values-ja/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361388583529" ignored="false" />
     <file path="$PROJECT_DIR$/google-play-services_lib/res/values-ko/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361388583531" ignored="false" />
+    <file path="/menu.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361714110736" ignored="false" />
+    <file path="/main.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361709798337" ignored="false" />
+    <file path="/AuthorizationDialog.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361720517562" ignored="false" />
+    <file path="/mainmenu.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361713125038" ignored="false" />
+    <file path="$USER_HOME$/.IdeaIC12/system/compile-server/geo2tag-client_898d257c/android/generated_sources/geo2tag-client/aapt/com/petrsu/geo2tag/R.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361714389255" ignored="false" />
+    <file path="/dialog_authorization.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361718446879" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,20 +155,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="10" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0245262">
+            <state line="246" column="20" selection-start="9602" selection-end="9602" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterUserRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/RegisterUserRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="39" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/MapActivity.java">
+      <file leaf-file-name="IRequest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.33333334">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainmenu.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/mainmenu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="127" selection-start="824" selection-end="824" vertical-scroll-proportion="-6.7">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="36" selection-start="279" selection-end="279" vertical-scroll-proportion="-1.76">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddChannelDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="63" selection-start="2411" selection-end="2465" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2211#2400#0" expanded="true" />
+                <element signature="e#2389#2390#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,31 +224,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="131" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/map.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="43" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dialog_authorization.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="15" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.0">
+            <state line="13" column="130" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,9 +233,37 @@
       <file leaf-file-name="AuthorizationDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
+            <state line="54" column="67" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1239#2059#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#3115#3116#0" expanded="true" />
+                <element signature="e#3188#3412#0" expanded="true" />
+                <element signature="e#3393#3394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="36" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-16.96">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog_authorization.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="23" selection-start="1966" selection-end="5916" vertical-scroll-proportion="-7.92">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -221,20 +286,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Channel.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/MapActivity.java" />
         <option value="$PROJECT_DIR$/google-play-services_lib/src/Dummy.java" />
         <option value="$PROJECT_DIR$/libs/dummy.java" />
         <option value="$PROJECT_DIR$/res/layout/map.xml" />
+        <option value="$PROJECT_DIR$/res/layout/menu.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/menu/mainmenu.xml" />
         <option value="$PROJECT_DIR$/res/layout/dialog_authorization.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
       </list>
@@ -273,7 +338,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +389,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo2tag-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo2tag-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,6 +476,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,8 +494,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\geo2tag-client\res\menu" />
+      <recent name="C:\GitHub\geo2tag-client\res" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.geo2tag-client">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -446,6 +535,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -471,19 +573,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -589,30 +678,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1864" height="1098" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.6702356" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.6702356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441112" sideWeight="0.49833333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441112" sideWeight="0.4977778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17055556" sideWeight="0.67558885" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17055556" sideWeight="0.6702356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.4977778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -677,122 +766,144 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/ChannelsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="15" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/add_channel.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="76" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="103" selection-start="2387" selection-end="2387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="100" selection-start="2853" selection-end="2853" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/GeoPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+        <state line="27" column="13" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java">
+    <entry file="file://$USER_HOME$/.IdeaIC12/system/compile-server/geo2tag-client_898d257c/android/generated_sources/geo2tag-client/aapt/com/petrsu/geo2tag/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.024229076" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.024229076">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="15" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.0">
+        <state line="134" column="104" selection-start="6251" selection-end="6251" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/map.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="304" selection-end="304" vertical-scroll-proportion="-2.64">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/add_channel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="131" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+        <state line="13" column="130" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="63" selection-start="2411" selection-end="2465" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2211#2400#0" expanded="true" />
+            <element signature="e#2389#2390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="23" selection-start="1966" selection-end="5916" vertical-scroll-proportion="-7.92">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="36" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-16.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
+        <state line="54" column="67" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1239#2059#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3188#3412#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/mainmenu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="127" selection-start="824" selection-end="824" vertical-scroll-proportion="-6.7">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="36" selection-start="279" selection-end="279" vertical-scroll-proportion="-1.76">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="10" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0245262">
+        <state line="246" column="20" selection-start="9602" selection-end="9602" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/RegisterUserRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="39" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>

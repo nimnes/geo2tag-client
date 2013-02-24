@@ -1,14 +1,13 @@
 package com.petrsu.geo2tag;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,7 +15,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import com.petrsu.geo2tag.objects.*;
 
-public class Main extends FragmentActivity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener {
+public class Main extends Activity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
     public final static String SERVER_URL = "http://192.168.112.107/service";
     private User m_user;
@@ -31,54 +30,70 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
 
         m_user = User.getInstance();
 
-        ListView listView = (ListView) findViewById(R.id.options_list);
-        String[] values = new String[] {"Available channels", "Add channel", "Tags", "Map"};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-                android.R.id.text1, values);
-        listView.setAdapter(adapter);
-
 //        m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
         if (m_user.getToken() == null) {
             AuthorizationDialog authorizationDialog = new AuthorizationDialog();
-            authorizationDialog.show(getSupportFragmentManager(), "dialog_authorization");
+            authorizationDialog.show(getFragmentManager(), "dialog_authorization");
         }
 
         SubscribedRequest subscribedRequest = new SubscribedRequest(m_user.getToken(), SERVER_URL,
                 new SubscribedRequestListener());
         subscribedRequest.doRequest();
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                onOptionSelected(position);
-            }
-        });
     }
 
-    private void onOptionSelected(int itemIndex) {
-        switch (itemIndex) {
-            case 0:
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Toast.makeText(this, "Menu item 1 selected", Toast.LENGTH_SHORT)
+                        .show();
+                break;
+            case R.id.action_channels:
                 AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
                         SERVER_URL, new AvailableChannelsRequestListener());
                 availableChannelsRequest.doRequest();
                 break;
-            case 1:
+            case R.id.action_add_channel:
                 AddChannelDialog addChannelDialog = new AddChannelDialog();
-                addChannelDialog.show(getSupportFragmentManager(), "add_channel");
+                addChannelDialog.show(getFragmentManager(), "add_channel");
                 break;
-            case 2:
-                // Petrozavodsk tags
-                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
-                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
-                loadTagsRequest.doRequest();
-                break;
-            case 3:
-                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-                startActivityForResult(intent, 3);
+            default:
                 break;
         }
+
+        return true;
     }
+
+//    private void onOptionSelected(int itemIndex) {
+//        switch (itemIndex) {
+//            case 0:
+//                AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
+//                        SERVER_URL, new AvailableChannelsRequestListener());
+//                availableChannelsRequest.doRequest();
+//                break;
+//            case 1:
+//                AddChannelDialog addChannelDialog = new AddChannelDialog();
+//                addChannelDialog.show(getSupportFragmentManager(), "add_channel");
+//                break;
+//            case 2:
+//                // Petrozavodsk tags
+//                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
+//                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
+//                loadTagsRequest.doRequest();
+//                break;
+//            case 3:
+//                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+//                startActivityForResult(intent, 3);
+//                break;
+//        }
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -225,11 +240,18 @@ public class Main extends FragmentActivity implements AddChannelDialog.AddChanne
 
     @Override
     public void onAuthorizationDialogPositiveClick(Bundle dialogResult) {
-        if(dialogResult.getString("email") == "") {
-            LoginRequest loginRequest = new LoginRequest(dialogResult.getString("username"), dialogResult.getString("password"), SERVER_URL, new LoginRequestListener());
+        if(dialogResult.getString("email").isEmpty()) {
+            LoginRequest loginRequest = new LoginRequest(dialogResult.getString("username"),
+                    dialogResult.getString("password"),
+                    SERVER_URL,
+                    new LoginRequestListener());
             loginRequest.doRequest();
         } else {
-            RegisterUserRequest registerUserRequest = new RegisterUserRequest(dialogResult.getString("username"), dialogResult.getString("password"), dialogResult.getString("email"), SERVER_URL, new LoginRequestListener());
+            RegisterUserRequest registerUserRequest = new RegisterUserRequest(dialogResult.getString("username"),
+                    dialogResult.getString("password"),
+                    dialogResult.getString("email"),
+                    SERVER_URL,
+                    new LoginRequestListener());
             registerUserRequest.doRequest();
         }
     }

@@ -21,4 +21,6 @@
     <string name="registration">Registration</string>
     <string name="email">Email</string>
     <string name="signin">Sign in</string>
+    <string name="register">Register</string>
+    <string name="title_authorization_dialog">Login</string>
 </resources>
