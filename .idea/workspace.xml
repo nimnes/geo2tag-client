@@ -30,15 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/mainmenu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" afterPath="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/dialog_authorization.xml" afterPath="$PROJECT_DIR$/res/layout/dialog_authorization.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geo2tag-client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -175,10 +167,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRequest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IRequest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.33333334">
+            <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -255,10 +247,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog_authorization.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dialog_authorization.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="23" selection-start="1966" selection-end="5916" vertical-scroll-proportion="-7.92">
+            <state line="43" column="39" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.72">
               <folding />
             </state>
           </provider>
@@ -298,10 +290,10 @@
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AddChannelDialog.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/menu/mainmenu.xml" />
-        <option value="$PROJECT_DIR$/res/layout/dialog_authorization.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
+        <option value="$PROJECT_DIR$/res/layout/dialog_authorization.xml" />
       </list>
     </option>
   </component>
@@ -697,7 +689,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17055556" sideWeight="0.6702356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17074527" sideWeight="0.6702356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976446" sideWeight="0.4977778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -834,16 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="23" selection-start="1966" selection-end="5916" vertical-scroll-proportion="-7.92">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="36" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-16.96">
@@ -903,9 +885,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/IRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.33333334">
+        <state line="146" column="15" selection-start="4549" selection-end="4549" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dialog_authorization.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="39" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.72">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
