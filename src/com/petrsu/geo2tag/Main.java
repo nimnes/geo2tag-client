@@ -2,23 +2,44 @@ package com.petrsu.geo2tag;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import com.petrsu.geo2tag.objects.*;
 
 public class Main extends Activity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
     public final static String SERVER_URL = "http://192.168.112.107/service";
     private User m_user;
+    private GoogleMap map;
+    private HashMap<Marker, Mark> tagsMarkerMap;
+    private MenuItem refreshMenuItem;
 
     /**
      * Called when the activity is first created.
@@ -28,6 +49,8 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        tagsMarkerMap = new HashMap<Marker, Mark>();
+
         m_user = User.getInstance();
 
 //        m_user.setToken("d41d8cd98f00b204e9800998ecf8427e");
@@ -36,15 +59,94 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
             authorizationDialog.show(getFragmentManager(), "dialog_authorization");
         }
 
+        map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(61.78, 34.36), 6));
+
+        map.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                View v = getLayoutInflater().inflate(R.layout.tag_info_window, null);
+
+                TextView titleView = (TextView) v.findViewById(R.id.title);
+                TextView descriptionView = (TextView) v.findViewById(R.id.description);
+
+                titleView.setText(marker.getTitle());
+                descriptionView.setText(marker.getSnippet());
+
+                Mark m = tagsMarkerMap.get(marker);
+                ImageView imageView = (ImageView) v.findViewById(R.id.image);
+
+                if (m.getBitmap() != null) {
+                    imageView.setImageBitmap(m.getBitmap());
+
+                    // set bitmap to null for memory optimization
+                    m.setBitmap(null);
+                } else if (!m.getLink().isEmpty()) {
+                    new DownloadImageTask().execute(marker);
+                }
+
+                return v;
+            }
+        });
+
         SubscribedRequest subscribedRequest = new SubscribedRequest(m_user.getToken(), SERVER_URL,
                 new SubscribedRequestListener());
         subscribedRequest.doRequest();
+    }
+
+    /***
+     * Downloading images for maps marks using AsyncTask
+     */
+    public class DownloadImageTask extends AsyncTask<Marker, Void, Bitmap> {
+        Mark m_mark = null;
+        Marker m_marker = null;
+
+        @Override
+        protected Bitmap doInBackground(Marker... markers) {
+            m_marker = markers[0];
+            m_mark = tagsMarkerMap.get(m_marker);
+
+            Bitmap bitmap = null;
+            Log.i("DownloadImageTask", "url: " + m_mark.getLink());
+
+            try {
+                bitmap = BitmapFactory.decodeStream((InputStream) new URL(m_mark.getLink()).getContent());
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return bitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap result) {
+            // update marker if it is shown
+            if (m_marker.isInfoWindowShown()) {
+                m_mark.setBitmap(result);
+                m_marker.showInfoWindow();
+            }
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenu, menu);
+
+        for (int i = 0; i < menu.size(); i++) {
+            if (menu.getItem(i).getItemId() == R.id.action_refresh) {
+                refreshMenuItem = menu.getItem(i);
+                break;
+            }
+        }
+
         return true;
     }
 
@@ -60,6 +162,13 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
                         SERVER_URL, new AvailableChannelsRequestListener());
                 availableChannelsRequest.doRequest();
                 break;
+            case R.id.action_refresh:
+                refreshMenuItem.setActionView(R.layout.refresh_spinner);
+                refreshMenuItem.expandActionView();
+                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
+                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
+                loadTagsRequest.doRequest();
+                break;
             case R.id.action_add_channel:
                 AddChannelDialog addChannelDialog = new AddChannelDialog();
                 addChannelDialog.show(getFragmentManager(), "add_channel");
@@ -70,30 +179,6 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
 
         return true;
     }
-
-//    private void onOptionSelected(int itemIndex) {
-//        switch (itemIndex) {
-//            case 0:
-//                AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
-//                        SERVER_URL, new AvailableChannelsRequestListener());
-//                availableChannelsRequest.doRequest();
-//                break;
-//            case 1:
-//                AddChannelDialog addChannelDialog = new AddChannelDialog();
-//                addChannelDialog.show(getSupportFragmentManager(), "add_channel");
-//                break;
-//            case 2:
-//                // Petrozavodsk tags
-//                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
-//                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
-//                loadTagsRequest.doRequest();
-//                break;
-//            case 3:
-//                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-//                startActivityForResult(intent, 3);
-//                break;
-//        }
-//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -136,6 +221,13 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
             try {
                 JSONObject responseJSON = new JSONObject(response);
                 m_user.setToken(responseJSON.getString("auth_token"));
+
+                refreshMenuItem.setActionView(R.layout.refresh_spinner);
+                refreshMenuItem.expandActionView();
+
+                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
+                        61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
+                loadTagsRequest.doRequest();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -226,6 +318,41 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
     public class LoadTagsRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
+            try {
+                JSONArray channelsArray = new JSONObject(response).getJSONObject("rss")
+                        .getJSONObject("channels")
+                        .getJSONArray("items");
+
+                for (int i = 0; i < channelsArray.length(); i++) {
+                    JSONObject channel = channelsArray.getJSONObject(i);
+
+                    JSONArray tags = channel.getJSONArray("items");
+                    Log.i(LISTENER_LOG, "" + tags.length());
+                    for (int j = 0; j < tags.length(); j++) {
+                        JSONObject tag = tags.getJSONObject(j);
+
+                        Mark m = new Mark();
+                        m.setTitle(tag.getString("title"));
+                        m.setDescription(tag.getString("description"));
+                        m.setLatitude(tag.getDouble("latitude"));
+                        m.setLongitude(tag.getDouble("longitude"));
+                        m.setLink(tag.getString("link"));
+
+                        Marker marker = map.addMarker(new MarkerOptions()
+                                .position(m.getPosition())
+                                .title(tag.getString("title"))
+                                .snippet(tag.getString("description")));
+
+                        tagsMarkerMap.put(marker, m);
+                    }
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            refreshMenuItem.collapseActionView();
+            refreshMenuItem.setActionView(null);
             Log.i(LISTENER_LOG, "Tags loaded");
         }
     }

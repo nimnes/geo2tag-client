@@ -48,8 +48,6 @@ public class AsyncRunner extends AsyncTask<JSONObject, Void, JSONObject> {
             HttpPost httpPost = new HttpPost(m_serverUrl + requestJSON.getString(METHOD));
             Log.i(ASYNC_LOG, m_serverUrl + requestJSON.getString(METHOD));
 
-//            httpPost.setHeader("content-type", "application/json");
-
             StringEntity entity = new StringEntity(requestJSON.getJSONObject("params").toString());
             entity.setContentEncoding(new BasicHeader(HTTP.CONTENT_ENCODING, "application/json"));
             entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));

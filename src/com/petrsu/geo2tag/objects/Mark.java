@@ -35,6 +35,9 @@
 
 package com.petrsu.geo2tag.objects;
 
+import android.graphics.Bitmap;
+import com.google.android.gms.maps.model.LatLng;
+
 public class Mark {
     private long id;
     private String authToken;
@@ -47,6 +50,7 @@ public class Mark {
     private double altitude;
     private String time;
     private String user;
+    private Bitmap bitmap = null;
 
     public String getUser() {
         return user;
@@ -102,6 +106,11 @@ public class Mark {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
+
+    public LatLng getPosition() {
+        return new LatLng(getLatitude(), getLongitude());
+    }
+
     public double getAltitude() {
         return altitude;
     }
@@ -120,5 +129,13 @@ public class Mark {
                 + channel + "\n, title=" + title + "\n, link=" + link
                 + "\n, description=" + description + "\n, latitude=" + latitude
                 + "\n, longitude=" + longitude + "\n, time=" + time + "]";
+    }
+
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
     }
 }
