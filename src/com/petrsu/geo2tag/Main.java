@@ -33,7 +33,8 @@ import java.util.HashMap;
 
 import com.petrsu.geo2tag.objects.*;
 
-public class Main extends Activity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener {
+public class Main extends Activity implements AddChannelDialog.AddChannelDialogListener, AuthorizationDialog.AuthorizationDialogListener,
+        AddTagDialog.AddTagDialogListener {
     public final static String EXTRA_MESSAGE = "com.petrsu.geo2tag.MESSAGE";
     public final static String SERVER_URL = "http://192.168.112.107/service";
     private User m_user;
@@ -141,12 +142,11 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
         inflater.inflate(R.menu.mainmenu, menu);
 
         for (int i = 0; i < menu.size(); i++) {
-            if (menu.getItem(i).getItemId() == R.id.action_refresh) {
-                refreshMenuItem = menu.getItem(i);
-                break;
-            }
+               if (menu.getItem(i).getItemId() == R.id.action_refresh) {
+                    refreshMenuItem = menu.getItem(i);
+                    break;
+                }
         }
-
         return true;
     }
 
@@ -172,6 +172,10 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
             case R.id.action_add_channel:
                 AddChannelDialog addChannelDialog = new AddChannelDialog();
                 addChannelDialog.show(getFragmentManager(), "add_channel");
+                break;
+            case R.id.action_add_tag:
+                AddTagDialog addTagDialog = new AddTagDialog();
+                addTagDialog.show(getFragmentManager(), "add_tag");
                 break;
             default:
                 break;
@@ -381,5 +385,10 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
                     new LoginRequestListener());
             registerUserRequest.doRequest();
         }
+    }
+
+    @Override
+    public void onAddTagDialogPositiveClick(Bundle dialogResult) {
+
     }
 }

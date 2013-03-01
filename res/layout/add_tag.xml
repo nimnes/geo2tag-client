@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tag_name"
+            android:id="@+id/tagName"
+            android:layout_marginLeft="4dp" android:layout_marginTop="16dp" android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp" android:inputType="text"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel"
+            android:id="@+id/channel" android:layout_gravity="left|center_vertical" android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp" android:layout_marginRight="4dp" android:layout_marginBottom="4dp"
+            android:textStyle="bold"/>
+    <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channelList" android:layout_gravity="right|center_vertical" android:layout_margin="4dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tag_description"
+            android:id="@+id/tagDescription" android:layout_margin="4dp" android:inputType="text"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tag_url"
+            android:id="@+id/tagUrl" android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp" android:layout_marginRight="4dp" android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag_coordinates"
+            android:id="@+id/coordinates" android:textStyle="bold" android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp" android:layout_marginRight="4dp" android:layout_marginBottom="4dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_margin="4dp">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tagLatitude" android:layout_weight="1" android:layout_marginRight="4dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tagLongitude" android:layout_weight="1" android:layout_marginLeft="4dp"/>
+    </LinearLayout>
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/changeCoordinates"
+            android:id="@+id/changeCoordinates" android:singleLine="true"
+            android:gravity="center_vertical|center_horizontal" android:layout_margin="4dp"/>
+</LinearLayout>
