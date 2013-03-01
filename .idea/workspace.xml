@@ -29,11 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tag_info_window.xml" afterPath="$PROJECT_DIR$/res/layout/tag_info_window.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geo2tag-client.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361802811056" ignored="false" />
+    <file path="/Dummy.txt" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1362143593275" ignored="false" />
     <file path="/IRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361205254316" ignored="false" />
     <file path="/SubscribeChannelRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361204841743" ignored="false" />
     <file path="/BaseRequest.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361207487172" ignored="false" />
@@ -54,7 +55,7 @@
     <file path="/MyApp.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361277459906" ignored="false" />
     <file path="/AddChannelActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361279948850" ignored="false" />
     <file path="/add_channel.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361280101296" ignored="false" />
-    <file path="/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361720401603" ignored="false" />
+    <file path="/strings.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1362143635734" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361713622455" ignored="false" />
     <file path="/AddChannelDialog.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361345014586" ignored="false" />
     <file path="/MapActivity.java" changelist="35ff6caa-8a66-4dc2-b94b-60dba5276e3e" time="1361371903644" ignored="false" />
@@ -111,6 +112,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -145,7 +147,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -170,7 +171,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="60" selection-start="639" selection-end="639" vertical-scroll-proportion="-6.16">
+            <state line="14" column="60" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,7 +183,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,7 +195,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="47" selection-start="454" selection-end="454" vertical-scroll-proportion="-3.96">
+            <state line="9" column="47" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,29 +205,27 @@
         <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="51" column="24" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tag_info_window.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/tag_info_window.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="57" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.82397">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tag_info_window.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/tag_info_window.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="136" selection-start="627" selection-end="627" vertical-scroll-proportion="-6.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="42" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-19.64">
+            <state line="3" column="78" selection-start="160" selection-end="160" vertical-scroll-proportion="0.07457627">
               <folding />
             </state>
           </provider>
@@ -273,7 +272,6 @@
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/AvailableChannelsRequest.java" />
         <option value="$PROJECT_DIR$/res/menu/mainmenu.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/DownloadImageTask.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java" />
@@ -283,6 +281,7 @@
         <option value="$PROJECT_DIR$/res/layout/refresh_spinner.xml" />
         <option value="$PROJECT_DIR$/src/com/petrsu/geo2tag/Main.java" />
         <option value="$PROJECT_DIR$/res/layout/tag_info_window.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -478,8 +477,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -520,19 +519,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -558,6 +544,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -667,26 +666,26 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298109" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972191" sideWeight="0.67558885" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441112" sideWeight="0.49833333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32441112" sideWeight="0.4977778" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32371795" sideWeight="0.4977778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298109" sideWeight="0.67558885" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17074527" sideWeight="0.67558885" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17055556" sideWeight="0.67558885" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.4977778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.6702356" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.6702356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -751,6 +750,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="42" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AsyncRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="125" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/AuthorizationDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="83" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0">
@@ -812,15 +825,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/petrsu/geo2tag/objects/Mark.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="24" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="42" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-19.64">
           <folding />
         </state>
       </provider>
@@ -830,7 +834,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="60" selection-start="639" selection-end="639" vertical-scroll-proportion="-6.16">
+        <state line="14" column="60" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -847,7 +851,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="454" selection-end="454" vertical-scroll-proportion="-3.96">
+        <state line="9" column="47" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -864,7 +868,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="57" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.82397">
+        <state line="14" column="136" selection-start="627" selection-end="627" vertical-scroll-proportion="-6.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="78" selection-start="160" selection-end="160" vertical-scroll-proportion="0.07457627">
           <folding />
         </state>
       </provider>
