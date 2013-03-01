@@ -23,5 +23,10 @@
     <string name="signin">Sign in</string>
     <string name="register">Register</string>
     <string name="title_authorization_dialog">Login</string>
+    <string name="tag_name">Name</string>
+    <string name="tag_description">Description</string>
+    <string name="tag_url">Image URL</string>
+    <string name="tag_coordinates">Coordinates</string>
+    <string name="changeCoordinates">Change Coordinates</string>
     <color name="bg_color">#ffffff</color>
 </resources>

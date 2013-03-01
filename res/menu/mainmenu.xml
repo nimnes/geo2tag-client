@@ -21,16 +21,23 @@
             android:icon="@drawable/collections_new_label"
             />
     <item
+            android:id="@+id/action_add_tag"
+            android:title="Add Tag"
+            android:orderInCategory="400"
+            android:showAsAction="always"
+            android:icon="@drawable/content_new"
+            />
+    <item
             android:id="@+id/action_refresh"
             android:title="Refresh"
-            android:orderInCategory="400"
+            android:orderInCategory="500"
             android:showAsAction="always"
             android:icon="@drawable/ic_action_refresh"
             />
     <item
             android:id="@+id/action_checkin"
             android:title="Checkin"
-            android:orderInCategory="500"
+            android:orderInCategory="600"
             android:showAsAction="ifRoom"
             />
 </menu>
