@@ -174,7 +174,7 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
                 addChannelDialog.show(getFragmentManager(), "add_channel");
                 break;
             case R.id.action_add_tag:
-                AddTagDialog addTagDialog = new AddTagDialog();
+                AddTagDialog addTagDialog = new AddTagDialog(m_user.getToken(), SERVER_URL);
                 addTagDialog.show(getFragmentManager(), "add_tag");
                 break;
             default:
