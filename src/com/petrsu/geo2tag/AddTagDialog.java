@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.location.LocationManager;
 import android.content.Context;
 import android.location.Location;
+import android.util.Log;
 
 /**
  * Created with IntelliJ IDEA.
@@ -78,7 +79,7 @@ public class AddTagDialog extends DialogFragment {
 
                         try{
                             String tagName = ((EditText) view.findViewById(R.id.tagName)).getText().toString();
-                            String tagChannel = channels.getString(channelId).toString();
+                            String tagChannel = channels.getJSONObject(channelId).getString("name").toString();
                             String tagDescription = ((EditText) view.findViewById(R.id.tagDescription)).getText().toString();
                             String tagUrl = ((EditText) view.findViewById(R.id.tagUrl)).getText().toString();
                             String tagLatitude = ((EditText) view.findViewById(R.id.tagLatitude)).getText().toString();
@@ -127,13 +128,15 @@ public class AddTagDialog extends DialogFragment {
 
                 String[] channelNames;
                 channelNames = new String[channels.length()];
-                channelNames[0] = "Empty";
 
                 for (int i = 0; i < channels.length(); i++) {
                     JSONObject c = channels.getJSONObject(i);
 
                     channelNames[i] = c.getString("name");
                 }
+
+                if (channelNames[0].isEmpty())
+                    channelNames[0] = "Empty";
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, channelNames);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 

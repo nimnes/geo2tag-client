@@ -25,7 +25,7 @@
             android:title="Add Tag"
             android:orderInCategory="400"
             android:showAsAction="always"
-            android:icon="@drawable/content_new"
+            android:icon="@drawable/location_place"
             />
     <item
             android:id="@+id/action_refresh"

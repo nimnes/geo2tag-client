@@ -30,6 +30,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Calendar;
 
 import com.petrsu.geo2tag.objects.*;
 
@@ -152,35 +153,39 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_search:
-                Toast.makeText(this, "Menu item 1 selected", Toast.LENGTH_SHORT)
+        if (m_user.getToken() != null) {
+            switch (item.getItemId()) {
+                case R.id.action_search:
+                    Toast.makeText(this, "Menu item 1 selected", Toast.LENGTH_SHORT)
                         .show();
-                break;
-            case R.id.action_channels:
-                AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
+                    break;
+                case R.id.action_channels:
+                    AvailableChannelsRequest availableChannelsRequest = new AvailableChannelsRequest(m_user.getToken(),
                         SERVER_URL, new AvailableChannelsRequestListener());
-                availableChannelsRequest.doRequest();
-                break;
-            case R.id.action_refresh:
-                refreshMenuItem.setActionView(R.layout.refresh_spinner);
-                refreshMenuItem.expandActionView();
-                LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
+                    availableChannelsRequest.doRequest();
+                    break;
+                case R.id.action_refresh:
+                    refreshMenuItem.setActionView(R.layout.refresh_spinner);
+                    refreshMenuItem.expandActionView();
+                    LoadTagsRequest loadTagsRequest = new LoadTagsRequest(m_user.getToken(),
                         61.78, 34.36, 30000, SERVER_URL, new LoadTagsRequestListener());
-                loadTagsRequest.doRequest();
-                break;
-            case R.id.action_add_channel:
-                AddChannelDialog addChannelDialog = new AddChannelDialog();
-                addChannelDialog.show(getFragmentManager(), "add_channel");
-                break;
-            case R.id.action_add_tag:
-                AddTagDialog addTagDialog = new AddTagDialog(m_user.getToken(), SERVER_URL);
-                addTagDialog.show(getFragmentManager(), "add_tag");
-                break;
-            default:
-                break;
+                    loadTagsRequest.doRequest();
+                    break;
+                case R.id.action_add_channel:
+                    AddChannelDialog addChannelDialog = new AddChannelDialog();
+                    addChannelDialog.show(getFragmentManager(), "add_channel");
+                    break;
+                case R.id.action_add_tag:
+                    AddTagDialog addTagDialog = new AddTagDialog(m_user.getToken(), SERVER_URL);
+                    addTagDialog.show(getFragmentManager(), "add_tag");
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            AuthorizationDialog authorizationDialog = new AuthorizationDialog();
+            authorizationDialog.show(getFragmentManager(), "dialog_authorization");
         }
-
         return true;
     }
 
@@ -319,6 +324,13 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
         }
     }
 
+    public class AddTagRequestListener extends BaseRequestListener {
+        @Override
+        public void onComplete(final String response) {
+            Log.i(LISTENER_LOG, "Channel created");
+        }
+    }
+
     public class LoadTagsRequestListener extends BaseRequestListener {
         @Override
         public void onComplete(final String response) {
@@ -389,6 +401,32 @@ public class Main extends Activity implements AddChannelDialog.AddChannelDialogL
 
     @Override
     public void onAddTagDialogPositiveClick(Bundle dialogResult) {
+        String tagName = dialogResult.getString("name");
+        String tagChannel = dialogResult.getString("channel");
+        String tagDescription = dialogResult.getString("description");
+        String tagUrl = dialogResult.getString("url");
+        String tagLatitude = dialogResult.getString("latitude");
+        String tagLongitude = dialogResult.getString("longitude");
 
+        final Calendar c = Calendar.getInstance();
+        String hour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));
+        String minute = String.valueOf(c.get(Calendar.MINUTE));
+        String second = String.valueOf(c.get(Calendar.SECOND));
+        String millisecond = String.valueOf(c.get(Calendar.MILLISECOND));
+
+        String day = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
+        if (Integer.parseInt(day) < 10) day = "0" + day;
+        String month = String.valueOf(c.get(Calendar.MONTH) + 1);
+        if (Integer.parseInt(month) < 10) month = "0" + month;
+        String year = String.valueOf(c.get(Calendar.YEAR));
+
+        String tagTime = day + " " + month + " " + year + " " + hour + ":" + minute + ":" + second + "." + millisecond;
+
+        if ((!tagName.isEmpty()) && (!tagChannel.isEmpty()) && (tagLatitude.isEmpty()) && (tagLongitude.isEmpty())) {
+            AddTagRequest addTagRequest = new AddTagRequest(m_user.getToken(), tagChannel, tagName, tagUrl, tagDescription,
+                    Double.parseDouble(tagLatitude), Double.parseDouble(tagLongitude), tagTime, SERVER_URL,
+                    new AddTagRequestListener());
+            addTagRequest.doRequest();
+        }
     }
 }
